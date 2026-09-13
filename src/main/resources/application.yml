@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: order-notification-service-fanout
+  cloud:
+    aws:
+      region:
+        static: ap-south-1
+
+app:
+  sns:
+    order-events-topic: order-events-topic
+  queue:
+    notification-queue: notification-service-queue
+    inventory-queue: inventory-service-queue
+    analytics-queue: analytics-service-queue
